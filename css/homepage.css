@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 120px;
+    position: fixed;
+    top: 0;
+    
+    z-index: 9999;
+}
+
+.header .headerAbs{
+    height: 120px;
+    width: 1440px;
+    position: absolute;
+    background: white;
+}
+
+.header .menu {
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.header .menu ul {
+    position: relative;
+    width: 768px;
+    height: 40px;
+}
+
+.header .menu ul li {
+    float: left;
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.header .menu ul li a {
+    text-decoration: none;
+    color: #0077D5;
+}
+
+.header .logo {
+    float: left;
+    height: 120px;
+}
+
+.header .logo img {
+    margin-top: 34px;
+    margin-left: 112px;
+    margin-bottom: 40px;
+}
+
+.header .search {
+    float: left;
+    margin-top: 25px;
+    margin-left: 558px;
+    width: 326px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.header .search a {
+    display: inline-block;
+    text-decoration: none;
+    width: 89px;
+    height: 24px;
+    border: 1px solid #B3B3B3;
+    border-radius: 8px;
+    color: #B3B3B3;
+    line-height: 26px;
+    text-align: center;
+}
+
+.header .search img {
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.header .search #txtSearch {
+    width: 166px;
+    height: 22px;
+    margin-left: 25px;
+}
+
+/*
+.banner {
+    height: 520px;
+    background-image: linear-gradient(45deg, #141A25 0%, #2E2E2E 100%);
+}
+*/
+
+.banner {
+    margin-top: 120px;
+    width: 100%;
+    height: 520px;
+    background-image: linear-gradient(45deg, #141A25 0%, #2E2E2E 100%);
+    position: relative;
+}
+
+.banner>a {
+    display: block;
+    position: absolute;
+    left: 20px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*當圖片數量增加，影片長度需更改，變為5s*圖片數量*/
+    -webkit-animation: silder 15s linear infinite;
+    animation: silder 15s linear infinite;
+}
+
+.banner>a>img {
+    display: block;
+    left: 20px;
+}
+
+/*動畫關鍵影格*/
+
+@-webkit-keyframes silder {
+    3% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    27% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    30% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+@keyframes silder {
+    3% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    27% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    30% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+/*每個圖片各延遲5秒*/
+
+.banner>a:nth-child(3) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.banner>a:nth-child(2) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.banner>a:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+/*滑入時停止播放*/
+
+.banner:hover>a {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.index {
+    height: 849px;
+    margin-top: 25px;
+}
+
+.indexContent {
+    float: left;
+    width: 784px;
+    padding-left: 120px;
+    height: 849px;
+}
+
+.indexContentTitle {
+    font-weight: bold;
+    height: 33px;
+    font-size: 24Px;
+    text-align: center;
+}
+
+.indexContentSubTitle {
+    font-weight: bold;
+    height: 24px;
+    font-size: 18Px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.indexContentSplitter {
+    height: 28px;
+    border-bottom-color: #0077D5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    width: 785px;
+}
+
+.indexContentBorder {
+    height: 700px;
+}
+
+.indexContentIntroduction {
+    float: left;
+    height: 271px;
+    width: 390px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 55px;
+}
+
+.CircleImage {
+    border-radius: 50%;
+    width: 143px;
+    height: 143px;
+    margin-top: 48px;
+    margin-left: 126px;
+}
+
+.CircleImageTitle {
+    margin-top: 21px;
+    font-weight: bold;
+    height: 36px;
+    font-size: 18Px;
+    text-align: center;
+}
+
+.CircleImageIntroduction {
+    width: 360px;
+    height: 56px;
+    padding-left: 14px;
+    padding-right: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.indexContentMore {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.indexContentMore a {
+    height: 22px;
+    font-size: 16Px;
+}
+
+.indexPencil {
+    float: left;
+    width: 426px;
+    height: 839px;
+    padding-left: 102px;
+}
+
+.indexPencilSplitter {
+    height: 10px;
+    background: #D8D8D8;
+    width: 300px;
+}
+
+.pencilTitle {
+    font-weight: bold;
+    height: 36px;
+    font-size: 18Px;
+    margin-top: 30px;
+}
+
+.pencilImage img {
+    height: 150px;
+    width: 300px;
+}
+
+.pencilImage p {
+    display: inline-block;
+    height: 120px;
+    width: 300px;
+}
+
+.pencilImageMore {
+    text-align: right;
+    padding-right: 130px;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.linkTitle p {
+    font-weight: bold;
+    height: 36px;
+    font-size: 18Px;
+    margin-top: 20px;
+}
+
+.linkTitle ul {
+    padding-left: 20px;
+}
+
+.linkTitle li {
+    color: #0077D5;
+}
+
+.linkTitle a {
+    color: #0077D5;
+    text-decoration: none;
+    height: 32px;
+    font-size: 16Px;
+}
+
+.indexTag {
+    background: #F1F1F1;
+}
+
+.indexTagTitle {
+    font-weight: bold;
+    height: 33px;
+    font-size: 24Px;
+    text-align: center;
+    padding-top: 69px;
+}
+
+.indexTagSubTitle {
+    font-weight: bold;
+    height: 36px;
+    font-size: 18Px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.indexTagSplitter {
+    height: 28px;
+    border-bottom-color: #0077D5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 120px;
+}
+
+.indexTagBorder {
+    height: 483px;
+    padding-left: 15px;
+    padding-right: 120px;
+}
+
+.tag {
+    float: left;
+    width: 330px;
+    height: 160px;
+    background: #F9F9F9;
+    margin-left: 105px;
+    margin-top: 74px;
+}
+
+.tagTitle {
+    font-weight: bold;
+    height: 36px;
+    font-size: 18Px;
+    text-align: center;
+    padding-top: 17px;
+}
+
+.tagSplitter {
+    border-bottom-color: #0077D5;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-left: 140px;
+    width: 48px;
+}
+
+.tagIntroduction {
+    margin-top: 18px;
+    width: 320px;
+    height: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tagIntroduction p {
+    height: 28px;
+    font-size: 18Px;
+}
+
+.indexTagMore {
+    text-align: right;
+    padding-right: 130px;
+    padding-top: 25px;
+    padding-bottom: 31px;
+}
+
+.indexVideo {
+    height: 500px;
+}
+
+.video {
+    float: left;
+    width: 659px;
+    padding-top: 77px;
+    padding-left: 129px;
+}
+
+.videoInformation {
+    float: left;
+    padding-left: 60px;
+    padding-top: 77px;
+    width: 462px;
+}
+
+.videoTitle {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.videoIntroduction {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.information {
+    height: 255px;
+    background: #232323;
+}
+
+.contactus {
+    float: left;
+    width: 498px;
+    padding-top: 46px;
+    padding-left: 222px;
+}
+
+.update {
+    float: left;
+    width: 720px;
+    padding-top: 46px;
+}
+
+.updateImage {
+    float: left;
+    width: 150px;
+    padding-top: 6px;
+    text-align: right;
+}
+
+.updateTitle {
+    float: left;
+    width: 145px;
+}
+
+.updateTitle p {
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 25px;
+}
+
+.updateInformation {
+    float: left;
+    width: 280px;
+}
+
+.updateInformation p {
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.goBack {
+    float: left;
+    margin-top: 100px;
+}
+
+.contactus p {
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.footer {
+    height: 64px;
+    background: #0077D5;
+    line-height: 64px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
