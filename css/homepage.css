@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body
+{
+    background:black;
+}
+
 .wrapper {
     width: 1440px;
     margin: 0 auto;
@@ -97,17 +102,16 @@
 */
 
 .banner {
-    margin-top: 120px;
-    width: 100%;
+    /* margin-top: 120px; */
+    width: 1280px;
     height: 520px;
-    background-image: linear-gradient(45deg, #141A25 0%, #2E2E2E 100%);
+     /* background-image: linear-gradient(45deg, #141A25 0%, #2E2E2E 100%); */
     position: relative;
 }
 
 .banner>a {
     display: block;
     position: absolute;
-    left: 20px;
     opacity: 0;
     filter: alpha(opacity=0);
     /*當圖片數量增加，影片長度需更改，變為5s*圖片數量*/
@@ -117,7 +121,8 @@
 
 .banner>a>img {
     display: block;
-    left: 20px;
+    width: 1240px;
+    padding: 20px 20px 0px 20px;
 }
 
 /*動畫關鍵影格*/
@@ -180,6 +185,18 @@
     clear: both;
 }
 
+.indexBody
+{
+    margin-top: 120px;
+     /* border: 20px;*/
+    border-top: 45px;
+    border-left: 80px;
+    border-right: 80px;
+    border-color:#424242;
+    border-style: solid;
+    background:white;
+}
+
 .index {
     height: 849px;
     margin-top: 25px;
@@ -187,9 +204,10 @@
 
 .indexContent {
     float: left;
-    width: 784px;
-    padding-left: 120px;
+    width: 744px;
+    padding-left: 20px;
     height: 849px;
+    box-sizing: border-box;
 }
 
 .indexContentTitle {
@@ -217,6 +235,7 @@
 
 .indexContentBorder {
     height: 700px;
+    width: 785px;
 }
 
 .indexContentIntroduction {
@@ -269,15 +288,15 @@
 
 .indexPencil {
     float: left;
-    width: 426px;
+    width: 360px;
     height: 839px;
-    padding-left: 102px;
+    padding-left: 150px;
 }
 
 .indexPencilSplitter {
     height: 10px;
     background: #D8D8D8;
-    width: 300px;
+    width: 350px;
 }
 
 .pencilTitle {
@@ -289,13 +308,13 @@
 
 .pencilImage img {
     height: 150px;
-    width: 300px;
+    width: 350px;
 }
 
 .pencilImage p {
     display: inline-block;
     height: 120px;
-    width: 300px;
+    width: 350px;
 }
 
 .pencilImageMore {
@@ -352,22 +371,23 @@
     border-bottom-color: #0077D5;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    margin-left: 120px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .indexTagBorder {
     height: 483px;
-    padding-left: 15px;
-    padding-right: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .tag {
     float: left;
-    width: 330px;
+    width: 315px;
     height: 160px;
     background: #F9F9F9;
-    margin-left: 105px;
-    margin-top: 74px;
+    margin-left: 60px;
+    margin-top: 70px;
 }
 
 .tagTitle {
@@ -419,7 +439,7 @@
     float: left;
     width: 659px;
     padding-top: 77px;
-    padding-left: 129px;
+    padding-left: 50px;
 }
 
 .videoInformation {
@@ -442,21 +462,21 @@
 }
 
 .information {
-    height: 255px;
-    background: #232323;
+    height: 180px;
+    background: #424242;
 }
 
 .contactus {
     float: left;
     width: 498px;
-    padding-top: 46px;
+    padding-top: 23px;
     padding-left: 222px;
 }
 
 .update {
     float: left;
     width: 720px;
-    padding-top: 46px;
+    padding-top: 23px;
 }
 
 .updateImage {
